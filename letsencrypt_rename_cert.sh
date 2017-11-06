@@ -25,8 +25,7 @@ TIME=$(date +%s)
 display_help() {
 cat << EOF
 
-usage: certbot_rename_cert.sh [OPTION...] <current name> <new name>
-   or: certbot_rename_cert.sh [OPTION...] -r <old name> <new name>
+usage: letsencrypt_rename_cert.sh [OPTION...] <current name> <new name>
 
 BASH script which renames a Let's Encrypt certificate
 
@@ -42,7 +41,7 @@ required arguments:
 optional arguments:
 	-d	disable backups of existing configuration. NOT RECCOMMENDED!
 	-h	display this help and exit
-	-i      ignore errors and continue regardless	
+	-i  ignore errors and continue regardless	
 	-p	path to Let's Encrypt configuration and certificates. Default: /etc/letsencrypt
 	-s	silent mode, no output
 	
