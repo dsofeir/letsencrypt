@@ -122,16 +122,16 @@ if [ $# -lt 2 ]; then display_help; exit 1; fi #show help on invalid number of a
 # Verify we are running as root
 USER=$(whoami)
 if [ ! $USER == 'root' ]; then 
-	if [ $MODE_SILENT == false ]; then
-		echo -e "\nWARNING: The script is not being run as user 'root' or with the 'sudo' command\n\nPlease ensure the user '$USER' have the requisite privileges to manipulate '$PATH_LE' and it's sub-folders, or run as 'root'\n"
-		
-		read  -p "Do you wish to continue? [ y/n ] (n) " prompt1
-        prompt1=${prompt1:-n}
-        if [ ! $prompt1 == 'y' ]; then
-            exit 0;
-        fi
-	fi
-fi #verify current certificate exists under Let's Encrypt path
+  if [ $MODE_SILENT == false ]; then
+    echo -e "\nWARNING: The script is not being run as user 'root' or with the 'sudo' command\n\nPlease ensure the user '$USER' have the requisite privileges to manipulate '$PATH_LE' and it's sub-folders, or run as 'root'\n"
+
+    read  -p "Do you wish to continue? [ y/n ] (n) " prompt1
+    prompt1=${prompt1:-n}
+    if [ ! $prompt1 == 'y' ]; then
+      exit 0;
+    fi
+  fi
+fi
 
 # Prompt with disclaimer
 if [ $MODE_SILENT == false ]; then
