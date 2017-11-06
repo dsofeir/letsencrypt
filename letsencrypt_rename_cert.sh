@@ -19,7 +19,6 @@
 #   limitations under the License. 
 
 ## Init
-
 TIME=$(date +%s)
 
 display_help() {
