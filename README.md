@@ -1,8 +1,4 @@
-# letsencrypt
-Collection of tools I use to manage my Let's Encrypt TLS certificates
-
-## What's in the box?
-At the moment just one BASH script which helps you rename your Let's Encrypt certificates
+BASH script which helps you rename your Let's Encrypt certificates
 
 ## Getting Started
 To use letsencrypt_rename_cert.sh to rename your certificates, just:
